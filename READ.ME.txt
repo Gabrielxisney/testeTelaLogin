@@ -1,0 +1,59 @@
+Nome do projeto: LoginScreen
+
+Versão: 1.0
+
+Data: 2023-11-16
+
+Autor: Bard
+
+Objetivo:
+
+Este projeto fornece uma classe simples para autenticação de usuário, simulando um banco de dados de usuário.
+
+Instruções de uso:
+
+Para usar a classe LoginScreen, siga estas etapas:
+
+Crie uma nova instância da classe LoginScreen.
+Chame o método login() para autenticar um usuário.
+O método login() aceita dois parâmetros:
+
+username: O nome de usuário do usuário que está tentando fazer login.
+password: A senha digitada pelo usuário.
+O método login() retorna true se a autenticação for bem-sucedida, false caso contrário.
+
+Exemplo de uso:
+
+	LoginScreen loginScreen = new LoginScreen();
+
+	boolean isLoggedIn = loginScreen.login("Daniel", "ohata123");
+
+	if (isLoggedIn) {
+    		// O usuário Daniel está autenticado.
+	} else {
+    		// O usuário Daniel não está autenticado.
+	}
+
+
+Explicação do código:
+
+A classe LoginScreen possui três métodos:
+
+* public LoginScreen(): Constrói uma nova instância da classe LoginScreen e inicializa o banco de dados de usuários com alguns usuários de amostra.
+* public boolean login(String username, String password): Tenta autenticar um usuário com base em seu nome de usuário e senha.
+* public void addUser(String username, String password): Adiciona um novo usuário ao banco de dados de usuários.
+* O método login() funciona da seguinte forma:
+
+1. Verifica se o nome de usuário fornecido existe no banco de dados de usuários.
+2. Se o nome de usuário existir, recupera a senha armazenada para esse nome de usuário.
+3. Compara a senha fornecida com a senha armazenada.
+4. Se as senhas forem iguais, o método retorna true.
+5. Caso contrário, o método retorna false.
+
+O método addUser() funciona da seguinte forma:
+
+1. Adiciona um novo registro ao banco de dados de usuários com o nome de usuário e senha fornecidos.
+Observações:
+
+* Esta classe é apenas um exemplo simples de autenticação de usuário. Para fins de produção, é importante implementar medidas de segurança adicionais, como criptografia de senhas.
+* O banco de dados de usuários simulado utilizado nesta classe não é seguro. Ele deve ser substituído por um banco de dados de usuários real em um ambiente de produção.
